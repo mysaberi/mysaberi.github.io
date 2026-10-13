@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatemeh (Fatima) Saberi Khomami</title>
+<meta name="description" content="Fatemeh (Fatima) Saberi Khomami, PhD student in Computer Science at the University of Saskatchewan, researching non-stationarity in cooperative multi-agent reinforcement learning.">
+<meta name="author" content="Fatemeh Saberi Khomami">
+<meta property="og:title" content="Fatemeh (Fatima) Saberi Khomami">
+<meta property="og:description" content="PhD student in Computer Science, University of Saskatchewan.">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2315181d'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23e2bb6a' text-anchor='middle'%3EFS%3C/text%3E%3C/svg%3E">
+<script>
+  // Apply the saved theme before the page paints (default: dark).
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root, html[data-theme="dark"] {
+    --bg: #15181d; --text: #e4e7eb; --heading: #f4f5f7; --muted: #a2aab4;
+    --rule: #2b3139; --accent: #e2bb6a; --accent-hover: #f3d797;
+    --photo: #20252c; --photo-border: #343b45;
+    color-scheme: dark;
+  }
+  html[data-theme="light"] {
+    --bg: #ffffff; --text: #22262b; --heading: #14171c; --muted: #59606a;
+    --rule: #e4e7eb; --accent: #4f7d4b; --accent-hover: #365533;
+    --photo: #eef0f3; --photo-border: #dde1e6;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.7;
+    transition: background-color .25s ease, color .25s ease;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, .news:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .sans { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+
+  .wrap {
+    max-width: 1080px; margin: 0 auto; padding: 72px 32px;
+    display: flex; flex-wrap: wrap; gap: 56px 72px; align-items: flex-start;
+  }
+  aside { flex: 1 1 260px; max-width: 300px; display: flex; flex-direction: column; gap: 20px; }
+  main { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 52px; }
+
+  .photo {
+    width: 220px; height: 220px; border-radius: 50%; overflow: hidden;
+    background: var(--photo); border: 1px solid var(--photo-border);
+  }
+  .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  h1 { margin: 0; font-weight: 600; font-size: 30px; line-height: 1.2; color: var(--heading); }
+  .role { margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+  .links { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 15px; }
+  .links a { display: inline-flex; align-items: center; gap: 10px; width: fit-content; }
+  .links svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+
+  .theme-toggle {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px;
+    border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--text);
+    font-size: 14px; cursor: pointer;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .theme-toggle svg { width: 16px; height: 16px; }
+  html[data-theme="dark"] .icon-moon, html[data-theme="light"] .icon-sun { display: none; }
+
+  h2 {
+    margin: 0 0 14px; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+  }
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  .news {
+    overflow-y: auto; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding-right: 8px; max-height: 262px;
+  }
+  .news-item { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 12px 0; }
+  .news-item + .news-item { border-top: 1px solid var(--rule); }
+  .news-date { font-size: 14px; color: var(--muted); padding-top: 3px; }
+  .news-hint { margin-top: 8px; font-size: 13px; color: var(--muted); }
+
+  .pub { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: flex-start; }
+  .pub-thumb { flex: 0 0 200px; display: block; }
+  .pub-thumb:hover { text-decoration: none; }
+  .pub-thumb img { display: block; width: 200px; height: auto; border-radius: 6px; background: #fff; border: 1px solid var(--rule); }
+  .pub-body { flex: 999 1 280px; min-width: 0; }
+  .pub-title { font-weight: 600; line-height: 1.45; color: var(--heading); }
+  .pub-venue { color: var(--muted); }
+  .pub-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; font-size: 14px; }
+
+  footer { font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 40px 16px; gap: 40px; }
+    aside { max-width: none; }
+    .news-item { grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) { body { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside>
+    <div class="photo">
+      <img src="assets/photo.jpg" alt="Portrait of Fatemeh Saberi Khomami" width="220" height="220">
+    </div>
+    <div>
+      <h1>Fatemeh (Fatima) Saberi Khomami</h1>
+      <p class="role sans">PhD Student, Computer Science<br>University of Saskatchewan<br>Saskatoon, Canada</p>
+    </div>
+    <nav class="links sans" aria-label="Contact and profiles">
+      <a href="mailto:f.saberi@usask.ca">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+        <span>f.saberi@usask.ca</span>
+      </a>
+      <a href="https://scholar.google.ca/citations?hl=en&amp;user=YPMvcTEAAAAJ">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
+        <span>Google Scholar</span>
+      </a>
+      <a href="https://github.com/mysaberi">
+        <svg viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/fatima-saberi">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="files/Fatemeh_Saberi_Khomami_CV.pdf">
+        <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z"/></svg>
+        <span>CV</span>
+      </a>
+    </nav>
+    <div>
+      <button type="button" class="theme-toggle sans" id="theme-toggle" aria-label="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span id="theme-label">Light mode</span>
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>I am a PhD student in Computer Science at the University of Saskatchewan, where I work in the <a href="https://madmuc.usask.ca/index.html">MADMUC Lab</a> with <a href="https://julita.usask.ca/">Prof. Julita Vassileva</a>. I am interested in what it takes for AI to work responsibly alongside humans.</p>
+      <p>My current research studies non-stationarity in cooperative multi-agent reinforcement learning, focusing on how agents can detect when their task or teammates change, and adapt to those changes. Before my PhD, I completed an MSc in Data Science, advised by Prof. Monireh Abdoos, where I worked on interactive reinforcement learning, and a BSc in Statistics, both at Shahid Beheshti University in Tehran.</p>
+    </section>
+
+    <section>
+      <h2>News</h2>
+      <!-- To add news: copy one news-item block and paste it at the TOP of the list. -->
+      <div class="news" id="news" tabindex="0" aria-label="News (scrollable)">
+        <div class="news-item">
+          <div class="news-date sans">Oct 2026</div>
+          <div>Presenting our paper on online change-point detection for cooperative MARL at <a href="https://www.paams.net/">PAAMS 2026</a> in Naples, Italy.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">Jul 2026</div>
+          <div>Our paper “Online Change-Point Detection for Cooperative Multi-agent Reinforcement Learning” was accepted to the <a href="https://www.paams.net/">24th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS 2026)</a>.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">2026</div>
+          <div>Received the Amii Talent Bursary to attend Upper Bound 2026.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">2025</div>
+          <div>Co-organized the 9th Symposium on Innovations in Computer Science &amp; Applied Computing at the University of Saskatchewan.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">2025</div>
+          <div>Received the Amii Talent Bursary to attend Upper Bound 2025.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">2024</div>
+          <div>Co-organized the 8th Symposium on Innovations in Computer Science &amp; Applied Computing at the University of Saskatchewan.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">2024</div>
+          <div>Received the Amii Talent Bursary to attend Upper Bound 2024.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">Sep 2023</div>
+          <div>Started my PhD in Computer Science at the University of Saskatchewan.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date sans">Sep 2023</div>
+          <div>Completed my MSc in Data Science at Shahid Beheshti University.</div>
+        </div>
+      </div>
+      <div class="news-hint sans" id="news-hint">Scroll for earlier news</div>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <div class="pub">
+        <a class="pub-thumb" href="files/SaberiKhomami_PAAMS2026_accepted.pdf" aria-label="Open the paper (PDF)">
+          <img src="assets/paams2026_thumb.png" alt="Episodic return with and without a reward-function change; the two curves split at the change point" width="200" height="145" loading="lazy">
+        </a>
+        <div class="pub-body">
+          <div class="pub-title">Online Change-Point Detection for Cooperative Multi-agent Reinforcement Learning</div>
+          <div><strong>Fatemeh Saberi Khomami</strong>, <a href="https://julita.usask.ca/">Julita Vassileva</a></div>
+          <div class="pub-venue">In <em>Advances in Practical Applications of Agents, Multi-Agent Systems, and Computational Social Science: The PAAMS Collection</em> (PAAMS 2026, Naples, Italy). Springer, to appear.</div>
+          <div class="pub-links sans">
+            <a href="files/SaberiKhomami_PAAMS2026_accepted.pdf">[pdf]</a>
+            <a href="https://arxiv.org/abs/2609.05298">[arXiv]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="sans">Last updated October 2026</footer>
+  </main>
+
+</div>
+
+<script>
+  // Light / dark toggle, remembered per visitor.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var label = document.getElementById('theme-label');
+    function sync() {
+      var dark = root.getAttribute('data-theme') !== 'light';
+      label.textContent = dark ? 'Light mode' : 'Dark mode';
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
+    });
+    sync();
+  })();
+
+  // News box: show exactly the first 3 items; the rest scroll.
+  (function () {
+    var box = document.getElementById('news');
+    var hint = document.getElementById('news-hint');
+    var VISIBLE = 3;
+    function fit() {
+      var items = box.querySelectorAll('.news-item');
+      if (items.length <= VISIBLE) {
+        box.style.maxHeight = 'none'; hint.style.display = 'none'; return;
+      }
+      box.style.maxHeight = 'none';
+      var top = box.getBoundingClientRect().top;
+      var bottom = items[VISIBLE - 1].getBoundingClientRect().bottom;
+      box.style.maxHeight = Math.ceil(bottom - top) + 'px';
+      hint.style.display = '';
+    }
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  })();
+</script>
+</body>
+</html>
